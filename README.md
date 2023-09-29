@@ -3,7 +3,9 @@
 - Please upload a repo that demonstrates the CRUD endpoints that interact with free
 Alpha Vantage API
 
-Live Demo: https://stock-timeseries.fly.dev/graphql 
+**Live Demo**: https://stock-timeseries.fly.dev/graphql 
+**Monitoring**
+<img width="1496" alt="image" src="https://github.com/nguyenphuhao/nestjs-alpha-vantage-api/assets/25168798/9d6ff91a-5a54-4f64-ab46-4494e3619032">
 
 ## Requirement
 - [x] Document the local deployment workflow
