@@ -32,7 +32,8 @@ src
 │   │       ├── get-time-series-stock-data.usecase.ts # Application business rules
 │   │       └── stock.entity.ts                       # Application Entity
 │   └── usecase.ts
-├── directory-structure.md
+├── interceptors
+│   └── graphql-logging.interceptor.ts                # For GraphQL Request/Response Logging
 ├── main.ts
 ├── providers
 │   └── alpha-vantage                                 # Provide the api integration Alpha Vantage API
