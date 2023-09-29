@@ -1,6 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
-import { TimeSeriesIntradayOptions } from './providers/alpha-vantage/alpha-vantage-api.provider';
 
 @Controller()
 export class AppController {
@@ -10,5 +9,4 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
-
 }

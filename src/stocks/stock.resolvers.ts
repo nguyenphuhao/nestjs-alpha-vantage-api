@@ -1,8 +1,7 @@
 import { Args, Query, Resolver } from "@nestjs/graphql";
-import { Stock } from "./models/stock.model";
+import { DailyStock, Stock } from "./models/stock.model";
 import { IStockService } from "./stock.service";
 import { GetTimeSeriesDailyStockArgs } from "./dto/get-time-series-daily-stock.args";
-import { GetTimeSeriesStockDataUseCase } from "src/core/domain/stock/get-time-series-stock-data.usecase";
 import { GetTimeSeriesIntradayStockArgs } from "./dto/get-time-series-intraday-stock.args";
 import { Services } from "src/core/di";
 import { Inject } from "@nestjs/common";
@@ -25,7 +24,7 @@ export class StocksResolver {
     });
   }
 
-  @Query(returns => Stock)
+  @Query(returns => DailyStock)
   async dailyTimeSeriesStock(@Args() args: GetTimeSeriesDailyStockArgs) {
     const { symbol, interval } = Object.assign({
       interval: '15min',

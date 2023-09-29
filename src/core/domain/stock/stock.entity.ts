@@ -13,7 +13,7 @@ export interface Metadata {
   information: string;
   symbol: string;
   lastRefreshed: string;
-  interval: string;
+  interval?: string;
   outputSize: string;
   timeZone: string;
 }
