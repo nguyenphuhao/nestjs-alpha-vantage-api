@@ -10,7 +10,7 @@ LABEL fly_launch_runtime="NestJS"
 WORKDIR /app
 
 # Set production environment
-ENV NODE_ENV="production"
+ENV NODE_ENV="development"
 
 
 # Throw-away build stage to reduce size of final image
@@ -38,5 +38,6 @@ FROM base
 COPY --from=build /app /app
 
 # Start the server by default, this can be overwritten at runtime
+ENV PORT=8080
 EXPOSE 8080
-CMD [ "npm", "run", "start" ]
+CMD ["node", "dist/main.js" ]
