@@ -3,7 +3,7 @@
 - Please upload a repo that demonstrates the CRUD endpoints that interact with free
 Alpha Vantage API
 
-
+Live Demo: https://stock-timeseries.fly.dev/graphql 
 
 ## Requirement
 - [x] Document the local deployment workflow
@@ -18,7 +18,7 @@ about the user’s stock preferences or portfolio in a database
 database to store user’s portfolio (choices of tickers), recommend using
 Mikro-ORM for interacting with the database
 - [x] Use Typescript
-- [ ] Environment should be reproducible on any machine
+- [x] Environment should be reproducible on any machine
 
 ## Folder Structure
 ```
