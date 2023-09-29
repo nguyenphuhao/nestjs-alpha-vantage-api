@@ -18,6 +18,43 @@ Mikro-ORM for interacting with the database
 - [x] Use Typescript
 - [ ] Environment should be reproducible on any machine
 
+## Folder Structure
+```
+src
+├── app.controller.spec.ts
+├── app.controller.ts
+├── app.module.ts
+├── app.service.ts
+├── core 
+│   ├── di.ts                                         # Dependencies Injection names
+│   ├── domain
+│   │   └── stock
+│   │       ├── get-time-series-stock-data.usecase.ts # Application business rules
+│   │       └── stock.entity.ts                       # Application Entity
+│   └── usecase.ts
+├── directory-structure.md
+├── main.ts
+├── providers
+│   └── alpha-vantage                                 # Provide the api integration Alpha Vantage API
+│       ├── alpha-vantage-api.provider.ts
+│       ├── alpha-vantage.helper.ts
+│       └── alpha-vantage.module.ts
+└── stocks                                            # Stock Graphql
+    ├── dto
+    │   ├── get-time-series-daily-stock.args.ts
+    │   └── get-time-series-intraday-stock.args.ts
+    ├── models
+    │   ├── metadata.model.ts
+    │   ├── stock.model.ts
+    │   └── time-series.model.ts
+    ├── stock.module.ts
+    ├── stock.resolvers.ts
+    └── stock.service.ts
+
+9 directories, 21 files
+
+```
+
 
 ## Installation
 
