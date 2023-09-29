@@ -3,7 +3,7 @@
 - Please upload a repo that demonstrates the CRUD endpoints that interact with free
 Alpha Vantage API
 
-Live Demo: https://stock-timeseries.fly.dev/graphql
+
 
 ## Requirement
 - [x] Document the local deployment workflow
