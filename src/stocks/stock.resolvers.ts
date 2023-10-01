@@ -6,7 +6,7 @@ import { GetTimeSeriesIntradayStockArgs } from "./dto/get-time-series-intraday-s
 import { Services } from "src/core/di";
 import { Inject } from "@nestjs/common";
 
-@Resolver(of => Stock)
+@Resolver()
 export class StocksResolver {
   constructor(
     @Inject(Services.StockService)
@@ -26,11 +26,10 @@ export class StocksResolver {
 
   @Query(returns => DailyStock)
   async dailyTimeSeriesStock(@Args() args: GetTimeSeriesDailyStockArgs) {
-    const { symbol, interval } = Object.assign({
-      interval: '15min',
-    }, args);
+    const { symbol, outputsize } = Object.assign({}, args);
     return this.stockService.getTimeSeriesDailyStock({
       symbol,
+      outputsize,
     });
   }
 }

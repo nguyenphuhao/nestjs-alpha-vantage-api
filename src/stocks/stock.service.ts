@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@nestjs/common';
 import { Providers } from 'src/core/di';
 import { GetTimeSeriesStockDataUseCase } from 'src/core/domain/stock/get-time-series-stock-data.usecase';
 import { TimeSeriesStockData } from 'src/core/domain/stock/stock.entity';
-import { AlphaVantageAPIProvider, TimeSeriesDailyOptions, TimeSeriesIntradayOptions } from 'src/providers/alpha-vantage/alpha-vantage-api.provider';
+import { TimeSeriesDailyOptions, TimeSeriesIntradayOptions } from 'src/providers/alpha-vantage/alpha-vantage-api.provider';
 
 export interface IStockService {
   getTimeSeriesIntradayStock(params: TimeSeriesIntradayOptions): Promise<TimeSeriesStockData>;

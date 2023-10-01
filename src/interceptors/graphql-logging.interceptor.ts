@@ -1,4 +1,5 @@
 import { Injectable, NestInterceptor, ExecutionContext, CallHandler, LoggerService } from '@nestjs/common';
+import { GqlExecutionContext } from '@nestjs/graphql';
 import { tap } from 'rxjs/operators';
 
 @Injectable()

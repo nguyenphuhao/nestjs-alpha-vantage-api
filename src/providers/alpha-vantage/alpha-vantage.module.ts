@@ -13,7 +13,8 @@ import { toTimeSeriesStockData } from './alpha-vantage.helper';
         maxRedirects: 5,
         baseURL: configService.get('PROVIDER_ALPHA_VANTAGE_STOCK_API_URL'),
         params: {
-          apikey: configService.get('PROVIDER_ALPHA_VANTAGE_STOCK_API_KEY')
+          apikey: configService.get('PROVIDER_ALPHA_VANTAGE_STOCK_API_KEY'),
+          datatype: 'json'
         },
         transformResponse: (data) => {
           return toTimeSeriesStockData(data);
